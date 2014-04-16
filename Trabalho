@@ -1,0 +1,153 @@
+#include <stdio.h>
+void mostra();
+void zerar();
+void apresentacao();
+int dmissionarios=3;
+   int emissionarios;
+   int dcanibais=3;
+   int ecanibais;
+   int barco=0;
+   int resp1,resp2;
+int main(){
+   int barco;
+   int direita=1;
+   int esquerda=0;
+    apresentacao();
+    mostra();
+    do{
+            printf(" \n\nLado Direito\n");
+   printf("Colocar no barco:\n");
+   printf("Missionario =1\n");
+   printf("Canibal     =2\n");
+   printf("Ninguem     =3\n");
+   do{
+   do{
+   do{
+   while(resp1<1||resp1>3){
+   scanf("%d",&resp1);
+   if(resp1<1||resp1>3){
+                                           printf("Opcao invalida, digite novamente:\n");}}
+    while(resp2<1||resp2>3){
+   scanf("%d",&resp2);
+   if(resp2<1||resp2>3){
+                                           printf("Opcao invalida, digite novamente:\n");}}
+
+
+   if(resp1==3 && resp2==3){
+               printf("Pelo menos um passageiro deve ir:\n");}
+
+}while(resp1==3 && resp2==3);
+
+   if(resp1==2){
+                dcanibais--;
+                ecanibais++;
+                barco++;
+                }else if(resp1==1){
+                      dmissionarios--;
+                      emissionarios++;
+                      }
+   if(resp2==2){
+               dcanibais--;
+               ecanibais++;
+               }else if(resp2==1){
+                     dmissionarios--;
+                     emissionarios++;
+                     }
+              } while(dmissionarios<0||dmissionarios>3);
+              } while(dcanibais<0||dcanibais>3);
+                     if(emissionarios>0){
+                     if(ecanibais>emissionarios){
+                                                                          mostra();
+                                                                          printf("Game Over\n");
+
+                                                                          break;
+                                                                          }
+                     if(dmissionarios>0){
+                                         if(dcanibais>dmissionarios){
+                                                                          mostra();
+                                                                          printf("Game Over\n");
+
+                                                                          break;
+                                                                          }
+                                         }
+                                                                          }
+         mostra();
+         zerar();
+
+
+printf("\n\nLado esquerdo:\n");
+  printf("Colocar no barco:\n");
+   printf("Missionario =1\n");
+   printf("Canibal     =2\n");
+   printf("Ninguem     =3\n");
+   do{
+   do{
+   do{
+                       while(resp1<1||resp1>3){
+   scanf("%d",&resp1);
+   if(resp1<1||resp1>3){
+                                           printf("Opcao invalida, digite novamente:\n");}}
+  while(resp2<1||resp2>3){
+   scanf("%d",&resp2);
+   if(resp2<1||resp2>3){
+                                           printf("Opcao invalida, digite novamente:\n");}}
+   if(resp1==3 && resp2==3){
+               printf("Pelo menos um passageiro deve ir:\n");}
+}while(resp1==3 && resp2==3);
+   if(resp1==2){
+                ecanibais--;
+                dcanibais++;
+                }else if(resp1==1){
+                      emissionarios--;
+                      dmissionarios++;
+                      }
+   if(resp2==2){
+               ecanibais--;
+               dcanibais++;
+               }else if(resp2==1){
+                     emissionarios--;
+                     dmissionarios++;
+                     }
+                      } while(emissionarios<0||emissionarios>3);
+                      } while(ecanibais<0||ecanibais>3);
+                      if(emissionarios>0){
+                     if(ecanibais>emissionarios){
+                                                                          mostra();
+                                                                          printf("Game Over\n");
+
+                                                                          break;
+                                                                          }
+                     if(dmissionarios>0){
+                                         if(dcanibais>dmissionarios){
+                                                                          mostra();
+                                                                          printf("Game Over\n");
+
+                                                                          break;
+                                                                          }
+                                         }
+                                                                          }
+mostra();
+zerar();
+
+}while((ecanibais+emissionarios)!=6);
+if(ecanibais==3&&emissionarios==3){
+printf("PARABENS!!!");}
+getchar();
+getchar();
+}
+void mostra(){
+printf("Direita :: %d Canibais e %d Missionarios\n ",dcanibais,dmissionarios);
+printf("\n\nEsquerda :: %d Canibais e %d Missionarios\n\n",ecanibais,emissionarios);
+     }
+void zerar(){
+     resp1=0;
+     resp2=0;
+
+     }
+     void apresentacao(){
+          printf("Ajude estes 3 canibais e 3 missionarios atravessarem o rio.\n");
+          printf("Nao deixe os canibais em maior numero junto dos missionarios em nenhum           dos lados senao eles comem os missionarios\n");
+          printf("O barco deve ter pelo menos 1 passageiro para se locomover!!! BOM JOGO\n");
+          getchar();
+
+          }
