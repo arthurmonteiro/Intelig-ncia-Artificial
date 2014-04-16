@@ -1,0 +1,28 @@
+int margem[2];
+int margem_opo[2];
+
+class Margem
+{
+public:
+	 Margem(arguments);
+	~ Margem();
+
+	int M = 3;
+	int C = 3;
+	int B = 1;
+
+};
+
+class Margem_Oposta
+{
+public:
+	Margem_Oposta(arguments);
+	~Margem_Oposta();
+	int M = 0;
+	int C = 0;
+	int B = 0;
+
+	/* data */
+};
+
+//Funções condicionais
