@@ -1,28 +1,75 @@
-int margem[2];
-int margem_opo[2];
+int margem[2] = {3,3,1}; 
+int margem_opo[2] = {0,0,0};
+
+
+
+
+//Funções condicionais
+Teste_1()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class Margem
 {
 public:
-	 Margem(arguments);
-	~ Margem();
+Margem(arguments);
+~ Margem();
 
-	int M = 3;
-	int C = 3;
-	int B = 1;
+int M = 3;
+int C = 3;
+int B = 1;
 
 };
 
 class Margem_Oposta
 {
 public:
-	Margem_Oposta(arguments);
-	~Margem_Oposta();
-	int M = 0;
-	int C = 0;
-	int B = 0;
+Margem_Oposta(arguments);
+~Margem_Oposta();
+int M = 0;
+int C = 0;
+int B = 0;
 
-	/* data */
+for(int i=0; i<3; i++){
+    for(j=0; j<3;j++){
+        //criar todos os casos possíveis,armazenando eles em novas estruturas
+        //checar se o caso atual é válido antes de inserir o mesmo. se não for, não inserir
+        //
+    }
+}
+    //imprimir as duas margens, tanto a primeira quanto a oposta para ter uma noção de como está
+    //implementar a busca em largura
+
+/* data */
+};
+
+class Node
+{
+public:
+    Node() {}
+    int estado_atual[2];
+    *Node pai;
+    *Node filhos;
+    Gerar_Filhos;
+    int profundidade = 0;
+    int custo = 0;
 };
 
 //Funções condicionais
